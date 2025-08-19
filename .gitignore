@@ -22,3 +22,6 @@ frontend/.env
 # Editor
 .vscode/
 .idea/
+
+# Env
+backend/.env
