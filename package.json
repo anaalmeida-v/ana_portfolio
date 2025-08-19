@@ -1,0 +1,24 @@
+{
+  "name": "ana_portfolio",
+  "version": "1.0.0",
+  "description": "This is my portfolio, where I share work and learnings from my journey as a developer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anaalmeida-v/ana_portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anaalmeida-v/ana_portfolio/issues"
+  },
+  "homepage": "https://github.com/anaalmeida-v/ana_portfolio#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.14.3"
+  }
+}
