@@ -1,0 +1,44 @@
+import React, { useEffect, useRef } from 'react';
+
+export const FundoInterativo = () => {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+    let animacaoId;
+
+    const ajustarTamanho = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    ajustarTamanho();
+    window.addEventListener(resize, ajustarTamanho);
+
+    const espacamento = 30;
+    const quantidadeX = 60;
+    const quantidadeY = 40;
+    let tempo = 0;
+
+    return () => {
+      window.removeEventListener('resize', ajustarTamanho);
+      cancelAnimationFrame(animacaoId);
+    }
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        zIndex: -1,
+        background: '#0c0c0e',
+        pointerEvents: 'none'
+      }}
+    />
+  )
+};
