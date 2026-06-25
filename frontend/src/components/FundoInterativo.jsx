@@ -20,6 +20,28 @@ export const FundoInterativo = () => {
     const quantidadeY = 40;
     let tempo = 0;
 
+    const loop = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let x = 0; x < quantidadeX; x++) {
+        for (let y = 0; y < quantidadeY; y++) {
+          const posX = x * espacamento;
+          const posY = (y * espacamento) + Math.sin((x * 0.3 + tempo) * 30);
+
+          ctx.beginPath();
+          ctx.arc(posX, posY, 1.5, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(124, 58, 237, 0.4)';
+          ctx.fill();
+        }
+      }
+
+      tempo += 0.05;
+
+      animacaoId = requestAnimationFrame(loop);
+    }
+
+    loop();
+
     return () => {
       window.removeEventListener('resize', ajustarTamanho);
       cancelAnimationFrame(animacaoId);
