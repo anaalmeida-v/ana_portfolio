@@ -28,13 +28,23 @@ export const FundoInterativo = () => {
 
       for (let x = 0; x < pontosNaLargura; x++) {
         for (let y = 0; y < pontosNaAltura; y++) {
-          const posX = x * espacamento;
-          const posY = (y * espacamento) + Math.sin(x * 0.3 + y * 0.1 + tempo) * 30;
+          const x3d = (x - pontosNaLargura / 2) * (espacamento * 3);
+          const y3d = Math.sin(x * 0.3 + y * 0.1 + tempo) * 50;
 
-          ctx.beginPath();
-          ctx.arc(posX, posY, 1.5, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(124, 58, 237, 0.4)';
-          ctx.fill();
+          const z3d = y * espacamento;
+
+          const distanciaDaCamera = 400;
+          const escala = distanciaDaCamera / (distanciaDaCamera + z3d);
+
+          const projecaoX = (canvas.width / 2) + x3d * escala;
+          const projecaoY = (canvas.height * 0.2) + (y3d * escala) + (z3d * escala * 1.2);
+
+          if (projecaoY >= 0 && projecaoY <= canvas.height) {
+            ctx.beginPath();
+            ctx.arc(projecaoX, projecaoY, 1.5 * escala, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(124, 58, 237, 0.4)';
+            ctx.fill();
+          }
         }
       }
 
