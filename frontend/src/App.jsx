@@ -1,5 +1,5 @@
 import './App.css'
-import FundoInterativo from './components/FundoInterativo'
+import { FundoInterativo } from './components/FundoInterativo';
 
 function App() {
 

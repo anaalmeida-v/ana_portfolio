@@ -13,7 +13,7 @@ export const FundoInterativo = () => {
       canvas.height = window.innerHeight;
     }
     ajustarTamanho();
-    window.addEventListener(resize, ajustarTamanho);
+    window.addEventListener('resize', ajustarTamanho);
 
     const espacamento = 30;
     const quantidadeX = 60;
@@ -26,7 +26,7 @@ export const FundoInterativo = () => {
       for (let x = 0; x < quantidadeX; x++) {
         for (let y = 0; y < quantidadeY; y++) {
           const posX = x * espacamento;
-          const posY = (y * espacamento) + Math.sin((x * 0.3 + tempo) * 30);
+          const posY = (y * espacamento) + Math.sin(x * 0.3 + tempo) * 30;
 
           ctx.beginPath();
           ctx.arc(posX, posY, 1.5, 0, Math.PI * 2);
