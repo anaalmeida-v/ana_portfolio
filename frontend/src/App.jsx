@@ -1,11 +1,11 @@
 import './App.css'
+import FundoInterativo from './components/FundoInterativo'
 
 function App() {
 
   return (
     <>
-      <div>
-      </div>
+      <FundoInterativo />
     </>
   )
 }
