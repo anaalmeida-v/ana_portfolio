@@ -23,10 +23,13 @@ export const FundoInterativo = () => {
     const loop = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      for (let x = 0; x < quantidadeX; x++) {
-        for (let y = 0; y < quantidadeY; y++) {
+      const pontosNaLargura = Math.ceil(canvas.width / espacamento) + 2;
+      const pontosNaAltura = Math.ceil(canvas.height / espacamento) + 2;
+
+      for (let x = 0; x < pontosNaLargura; x++) {
+        for (let y = 0; y < pontosNaAltura; y++) {
           const posX = x * espacamento;
-          const posY = (y * espacamento) + Math.sin(x * 0.3 + tempo) * 30;
+          const posY = (y * espacamento) + Math.sin(x * 0.3 + y * 0.1 + tempo) * 30;
 
           ctx.beginPath();
           ctx.arc(posX, posY, 1.5, 0, Math.PI * 2);
@@ -36,9 +39,8 @@ export const FundoInterativo = () => {
       }
 
       tempo += 0.05;
-
       animacaoId = requestAnimationFrame(loop);
-    }
+    };
 
     loop();
 
