@@ -9,7 +9,7 @@ export const Home = () => {
 
                 <h1 className="home-title">
                     Criando experiências digitais <br /> interativas com
-                    <span className="home-destaque">código moderno</span>.
+                    <span className="home-destaque"> código moderno</span>.
                 </h1>
 
                 <p className="home-description">
