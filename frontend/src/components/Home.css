@@ -40,7 +40,7 @@
 
 .home-destaque {
     background: linear-gradient(90deg, #7c3aed, #06b6d4);
-    -webkit-backdrop-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
