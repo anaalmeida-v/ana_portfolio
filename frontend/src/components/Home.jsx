@@ -292,7 +292,7 @@ export const Home = () => {
       </section>
 
       <footer className="footer">
-        <p>ana almeida - dev front-end / web developes | 2026</p>
+        <p>ana almeida - dev front-end / web developer | 2026</p>
       </footer>
     </main>
   );
