@@ -243,9 +243,6 @@ export const Home = () => {
           <div className="education-grid">
             {education.map((item) => (
               <div key={item.title} className="education-card">
-                {item.link && (
-                  <a href="#" className="education-link">ver info</a>
-                )}
                 <h3 className="education-title">{item.title}</h3>
                 <p className="education-institution">{item.institution}</p>
                 {item.period && (
