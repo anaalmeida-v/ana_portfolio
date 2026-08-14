@@ -42,17 +42,17 @@ const experiences = [
 const education = [
   {
     title: 'Análise e Desenvolvimento de Sistemas',
-    institution: 'IFSP',
-    period: 'Nov 2021 - Dez 2024',
+    institution: 'UNIP',
+    period: 'Jan 2024 - Dez 2025',
   },
   {
     title: 'Técnico em Desenvolvimento de Sistemas',
     institution: 'ETEC',
-    period: 'Jan 2019 - Dez 2020',
+    period: 'Jan 2021 - Dez 2023',
   },
   {
     title: 'Fundamentos Front-End',
-    institution: 'Alura',
+    institution: 'Udemy',
     link: true,
   },
   {
