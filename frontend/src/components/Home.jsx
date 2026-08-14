@@ -51,15 +51,15 @@ const education = [
     period: 'Jan 2021 - Dez 2023',
   },
   {
-    title: 'Fundamentos Front-End',
-    institution: 'Udemy',
-    link: true,
+    title: "React do Zero à Maestria",
+    institution: "Udemy • Matheus Battisti (Hora de Codar)",
+    period: "Hooks, Context API, React Router, Consumo de APIs REST"
   },
   {
-    title: 'Desenvolvimento Web Completo',
-    institution: 'Udemy',
-    link: true,
-  },
+    title: "Desenvolvimento Web Completo",
+    institution: "Udemy • Jorge Sant Ana & Jamilton Damasceno",
+    period: "HTML5, CSS3, JS Moderno, PHP & MySQL"
+  }
 ];
 
 const contacts = [
