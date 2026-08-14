@@ -13,7 +13,7 @@ export const Header = () => {
     return (
         <header className="header-container">
             <div className="header-logo">
-            <span className="logo-cursor">_&lt;</span> ANA<span className="logo-dev">.DEV</span> <span className="logo-cursor">&gt;_</span>
+            <span className="logo-cursor">&lt;</span> ANA<span className="logo-dev">.DEV</span> <span className="logo-cursor">&gt;</span>
             </div>
 
             <nav className="header-nav">
